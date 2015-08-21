@@ -1,0 +1,5 @@
+/output/*.png
+/cpp/gothic
+/cpp/*.png
+/input/800_600
+.DS_Store

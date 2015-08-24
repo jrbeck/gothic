@@ -11,7 +11,7 @@ The C++ version uses SDL2 (since that's all Brew was willing to give me) for the
 I tried out a bunch of different algorithms/color strategies/etc... and threw most of them out in favor of a pretty naive method that gives pretty good results. A lot of the code is vestigial in that sense as I just didn't bother getting rid of all of it.
 
 Resources:
-- [Imagemagick](http://www.imagemagick.org/script/index.php)
+- [ImageMagick](http://www.imagemagick.org/script/index.php)
 - [Gosu](https://www.libgosu.org/)
 - [LodePNG](http://lodev.org/lodepng/)
 - [SDL](https://www.libsdl.org/)

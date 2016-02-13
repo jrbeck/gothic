@@ -88,13 +88,12 @@ unsigned ImageBuffer::softResize(unsigned width, unsigned height) {
   return 0;
 }
 
-
 Pixel *ImageBuffer::getPixel(int x, int y) {
   unsigned offset = getOffset(x, y);
   return &mPixels[offset];
 }
 
-void ImageBuffer::setPixel(int x, int y, Pixel& pixel) {
+void ImageBuffer::setPixel(int x, int y, const Pixel& pixel) {
   unsigned offset = getOffset(x, y);
   mPixels[offset].setRgb(pixel.mR, pixel.mG, pixel.mB);
 }
@@ -116,7 +115,7 @@ void ImageBuffer::convertToRgba(std::vector<unsigned char>& rgbaVector) const {
   }
 }
 
-SDL_Surface* ImageBuffer::toSdlSurface() {
+SDL_Surface* ImageBuffer::toSdlSurface() const {
   SDL_Surface* surface = SDL_CreateRGBSurface(
     0,
     mWidth,

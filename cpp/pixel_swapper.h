@@ -1,7 +1,7 @@
+#pragma once
+
 #include "image_buffer.h"
 #include "pseudo_random.h"
-
-#ifndef _pixel_swapper_h
 
 class PixelSwapper {
 public:
@@ -28,7 +28,3 @@ private:
   unsigned deltaRgb(const Pixel& a, const Pixel& b) const;
   unsigned deltaLab(const Pixel& a, const Pixel& b) const;
 };
-
-
-#define _pixel_swapper_h
-#endif

@@ -10,7 +10,7 @@
 // *
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-#ifndef _pseudo_random_h
+#pragma once
 
 #include <cmath>
 
@@ -38,7 +38,3 @@ private:
   unsigned mSeed;
   unsigned mX;
 };
-
-
-#define _pseudo_random_h
-#endif

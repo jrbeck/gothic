@@ -1,6 +1,6 @@
-#include <cmath>
+#pragma once
 
-#ifndef _pixel_h
+#include <cmath>
 
 class Pixel {
 public:
@@ -25,6 +25,3 @@ public:
   void toXyz(float* rgb) const;
   void toLab(float* xyz) const;
 };
-
-#define _pixel_h
-#endif

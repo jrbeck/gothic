@@ -45,8 +45,7 @@ int SdlApp::quit() {
   return 0;
 }
 
-int SdlApp::drawFrame(ImageBuffer* imageBuffer) {
-  // get the surface from the image buffer
+int SdlApp::drawFrame(const ImageBuffer* imageBuffer) {
   SDL_Surface* surface = imageBuffer->toSdlSurface();
   if (surface == nullptr) {
     // SDL_DestroyRenderer(mSdlRenderer);

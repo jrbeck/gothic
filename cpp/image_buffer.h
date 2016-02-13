@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 
@@ -6,8 +8,6 @@
 #include "lib/lodepng.h"
 
 #include "pixel.h"
-
-#ifndef _image_buffer_h
 
 #define RAW_PIXEL_SIZE (4)
 #define SDL_BIT_DEPTH  (32)
@@ -31,11 +31,11 @@ public:
   unsigned softResize(unsigned width, unsigned height);
 
   Pixel* getPixel(int x, int y);
-  void setPixel(int x, int y, Pixel& pixel);
+  void setPixel(int x, int y, const Pixel& pixel);
   void setRgb(int x, int y, unsigned char r, unsigned char g, unsigned char b);
 
   void convertToRgba(std::vector<unsigned char>& rgbaVector) const;
-  SDL_Surface* toSdlSurface();
+  SDL_Surface* toSdlSurface() const;
 
 private:
   unsigned mWidth, mHeight;
@@ -51,6 +51,3 @@ private:
   unsigned getOffset(int x, int y);
   void buildFromRgbaVector(std::vector<unsigned char>& rgbaVector);
 };
-
-#define _image_buffer_h
-#endif

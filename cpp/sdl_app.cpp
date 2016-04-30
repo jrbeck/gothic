@@ -7,8 +7,7 @@ SdlApp::SdlApp() :
 {}
 
 SdlApp::~SdlApp()
-{
-}
+{}
 
 int SdlApp::init(unsigned width, unsigned height) {
   printf("initing sdl app: %d, %d\n", width, height);
@@ -66,7 +65,7 @@ int SdlApp::drawFrame(const ImageBuffer* imageBuffer) {
   }
 
   SDL_RenderClear(mSdlRenderer);
-  SDL_RenderCopy(mSdlRenderer, texture, NULL, NULL);
+  SDL_RenderCopy(mSdlRenderer, texture, nullptr, nullptr);
   SDL_RenderPresent(mSdlRenderer);
 
   destroyTexture();

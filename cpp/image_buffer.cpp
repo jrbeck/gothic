@@ -4,8 +4,7 @@ ImageBuffer::ImageBuffer() :
 mWidth(0),
 mHeight(0),
 mPixels(nullptr)
-{
-}
+{}
 
 ImageBuffer::ImageBuffer(const ImageBuffer& other) :
 mWidth(0),

@@ -1,7 +1,6 @@
 require "rmagick"
 
 class RgbPixel
-
   attr_accessor :r, :g, :b
   attr_accessor :r_float, :b_float, :g_float
   attr_accessor :luma
@@ -507,10 +506,7 @@ class IterativeRandomSwapper
     end
     puts "Done creating animation.Time: #{Time.now - start_time}"
   end
-
 end
-
-
 
 
 # actual program ----------------------------------------------------------------------------------------

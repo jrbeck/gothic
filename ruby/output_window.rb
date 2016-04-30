@@ -3,7 +3,6 @@ require 'gosu'
 include Gosu
 
 class OuputWindow < Gosu::Window
-
   def initialize(swapper)
     @swapper = swapper
     output = swapper.output
@@ -28,8 +27,7 @@ class OuputWindow < Gosu::Window
   end
 
   def update
-    @swapper.perform_once(10000)
+    @swapper.perform_once(10_000)
     @ready_to_draw = true
   end
-
 end

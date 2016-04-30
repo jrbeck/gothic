@@ -1,7 +1,6 @@
 load 'rgb_pixel_buffer.rb'
 
 class PixelSwapper
-
   attr_accessor :output
 
   def initialize(color_source_path, image_source_path)
@@ -263,5 +262,4 @@ class PixelSwapper
     end
     puts "Done creating animation. Time: #{Time.now - start_time}"
   end
-
 end

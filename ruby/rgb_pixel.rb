@@ -2,7 +2,6 @@ require 'rmagick'
 
 
 class RgbPixel
-
   attr_accessor :r, :g, :b
   attr_accessor :r_float, :b_float, :g_float
   attr_accessor :luma
@@ -37,7 +36,7 @@ class RgbPixel
 
   def pivot_rgb(value)
     if value > 0.04045
-      ((value + 0.055 ) / 1.055 ) ** 2.4
+      ((value + 0.055) / 1.055) ** 2.4
     else
       value / 12.92
     end
@@ -59,7 +58,7 @@ class RgbPixel
     p_g = pivot_rgb(self.g_float) * 100.0
     p_b = pivot_rgb(self.b_float) * 100.0
 
-    # Observer = 2°, Illuminant = D65
+    # Observer = 2deg, Illuminant = D65
     x = p_r * 0.4124 + p_g * 0.3576 + p_b * 0.1805
     y = p_r * 0.2126 + p_g * 0.7152 + p_b * 0.0722
     z = p_r * 0.0193 + p_g * 0.1192 + p_b * 0.9505
@@ -116,5 +115,4 @@ class RgbPixel
     self.b = other.b
     update_float_and_luma
   end
-
 end

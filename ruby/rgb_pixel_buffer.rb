@@ -2,7 +2,6 @@ require 'rmagick'
 load 'rgb_pixel.rb'
 
 class RgbPixelBuffer
-
   attr_accessor :width, :height
 
   def initialize(source, width = nil, height = nil)
@@ -39,6 +38,4 @@ class RgbPixelBuffer
       end
     end
   end
-
 end
-

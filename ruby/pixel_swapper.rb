@@ -71,6 +71,12 @@ class PixelSwapper
     # swap_accum_2.g += max_mult * (pixel_1.g - pixel_2.g)
     # swap_accum_2.b += max_mult * (pixel_1.b - pixel_2.b)
 
+    # this ... should be in its own optimized method for single swapping
+    if distance.zero?
+      source_accum_1 = @image_source.get_pixel(x1, y1)
+      source_accum_2 = @image_source.get_pixel(x2, y2)
+    end
+
     cur_delta = delta(output_accum_1, source_accum_1) + delta(output_accum_2, source_accum_2);
     new_delta = delta(swap_accum_1, source_accum_1) + delta(swap_accum_2, source_accum_2);
 
@@ -229,8 +235,8 @@ class PixelSwapper
       x2 = rand(@width)
       y2 = rand(@height)
 
-      # swaps += checkswap_dither(x1, y1, x2, y2, 1)
-      swaps += checkswap_single(x1, y1, x2, y2)
+      swaps += checkswap_dither(x1, y1, x2, y2, 0)
+      # swaps += checkswap_single(x1, y1, x2, y2)
       # swaps += checkswap_exact(x1, y1, x2, y2)
     end
 

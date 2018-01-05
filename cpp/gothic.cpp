@@ -73,7 +73,7 @@ int main(int argc, char** argv) {
     targetPath.append(argv[2]);
   }
   else {
-    palettePath.append("a_gothic.png");
+    palettePath.append("b_mona.png");
     targetPath.append("a_mona.png");
   }
 
